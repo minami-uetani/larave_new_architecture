@@ -8,12 +8,16 @@ Laravelでユーザーモデルを利用した決済処理の実装例です。
 app/
 ├── Models/
 │   └── User/
-│       ├── User.php                  # ユーザーメインクラス
+│       ├── index.php                 # ユーザーメインクラス
+│       ├── Scope.php                 # スコープ
+│       ├── Relation.php              # リレーション
 │       └── Trait/
 │           └── HasStripePayment.php  # Stripe決済用トレイト
 └── Http/
     └── Controllers/
         └── OrderController.php       # 注文処理コントローラー
+└── Provider/
+    └── AppServiceProvider.php        # エイリアス設定
 ```
 
 ## 特徴
